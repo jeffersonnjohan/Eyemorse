@@ -9,6 +9,7 @@ counterFrame = 0
 morse_string = ""
 final_message = ""
 isBlinking = False
+isDetectingFace = False
 
 #Initialize the Flask app
 app = Flask(__name__)
@@ -111,6 +112,7 @@ def gen_frames():
     global final_message
     global counterFrame
     global isBlinking
+    global isDetectingFace
 
     counterFrame = 0
     morse_string = ""
@@ -122,6 +124,7 @@ def gen_frames():
         img, faces = detector.findFaceMesh(img, draw = False)
         
         if faces:
+            isDetectingFace = True
             face = faces[0]
             
             for id in idList:
@@ -186,10 +189,7 @@ def gen_frames():
             yield (b'--frame\r\n'
                 b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
         else:
-            print("tak nampak")
-
-    cv2.destroyAllWindows()
-    cv2.waitKey(1)
+            isDetectingFace = False
 
 @app.route('/')
 def index():
@@ -202,7 +202,7 @@ def video_feed():
 @app.route('/_stuff', methods=['GET'])
 def stuff():
     global counterFrame
-    return jsonify(blinkCounter=counterFrame, stringMorse = morse_string, stringFinal = final_message, isBlinking = isBlinking)
+    return jsonify(blinkCounter=counterFrame, stringMorse = morse_string, stringFinal = final_message, isBlinking = isBlinking, isDetectingFace = isDetectingFace)
 
 if __name__ == "__main__":
     app.run(debug=True)

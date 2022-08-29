@@ -209,17 +209,32 @@
         }
 
         .kedip{
+            /*Ini kalau style kedip*/
             background-color: greenyellow;
         }
-
+        
         .non-kedip{
+            /*Ini kalau style tidak kedip*/
             background-color: red;
         }
 
         #success{
+            /* Ini utk style default indikator */
             height: 30px;
             width: 100%;
         }
+
+        #faceDetection{
+            /*Ini pesan no face detection*/
+            background-color: pink;
+            height: 50px;
+            width: 100px;
+        }
+
+        #faceDetection.displayNone{
+            display: none;
+        }
+
     </style>
     <title>EyeMorse</title>
 </head>
@@ -235,7 +250,6 @@
             $('#blinkCounter').text(data.blinkCounter);
             $('#stringMorse').text(data.stringMorse);
             $('#stringFinal').text(data.stringFinal);
-            $('#isBlinking').text(data.isBlinking);
 
             if(data.isBlinking){
                 // Kedip
@@ -245,6 +259,14 @@
                 // Tidak kedip
                 $('#success').removeClass('kedip');
                 $('#success').addClass('non-kedip');
+            }
+
+            if(data.isDetectingFace){
+                // Ada mukanya
+                $('#faceDetection').addClass('displayNone');
+            } else{
+                // Tidak ada mukanya
+                $('#faceDetection').removeClass('displayNone');
             }
         });
     };
@@ -326,6 +348,11 @@
     <!-- Lampu indikator kedip dan non kedip -->
     <div id="success">
 
+    </div>
+
+    <!-- Indikator muka terdeteksi -->
+    <div id="faceDetection" class="displayNone">
+        hai
     </div>
 
     <!-- Footer -->
