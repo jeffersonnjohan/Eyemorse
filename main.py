@@ -8,6 +8,7 @@ from cvzone.PlotModule import LivePlot
 counterFrame = 0
 morse_string = ""
 final_message = ""
+isBlinking = False
 
 #Initialize the Flask app
 app = Flask(__name__)
@@ -109,6 +110,12 @@ def gen_frames():
     global morse_string
     global final_message
     global counterFrame
+    global isBlinking
+
+    counterFrame = 0
+    morse_string = ""
+    final_message = ""
+    isBlinking = False
 
     while True:
         success, img = camera.read()
@@ -120,15 +127,11 @@ def gen_frames():
             for id in idList:
                 cv2.circle(img, face[id], 5, color, cv2.FILLED)
             
-            leftUp = face[159] #159
-            leftDown = face[23] # 23
+            leftUp = face[159]
+            leftDown = face[23]
             leftLeft = face[130]
             leftRight = face[243]
             
-            # left = 160,24
-            # mid = 159, 23
-            # right = 159, 23
-
             lengthVer, _ = detector.findDistance(leftUp, leftDown)
             lengthHor, _ = detector.findDistance(leftLeft, leftRight)
             
@@ -142,10 +145,11 @@ def gen_frames():
                 ratioList.pop(0)
             
             ratioAvg = sum(ratioList)/len(ratioList)
-            
-            if(ratioAvg < 30) and counter == 0:
-                counterFrame += 1
 
+            if(ratioAvg < 30) and counter == 0:
+                # Mata kedip
+                isBlinking = True
+                counterFrame += 1
                 blinkCounter += 1
                 color = (0, 200, 0)
                 counter = 1
@@ -157,6 +161,7 @@ def gen_frames():
             
             if ratioAvg >= 30:
                 # Mata terbuka
+                isBlinking = False
                 if counterFrame >= 10:
                     # Convert string menjadi alphabet
                     final_message += morse_dict(morse_string)
@@ -173,18 +178,18 @@ def gen_frames():
             
             cvzone.putTextRect(img, f'Blink Counter: {counterFrame}', (100,100), colorR = color)
             cvzone.putTextRect(img, f'Final: {final_message}', (100,300), colorR = color)
-            cvzone.putTextRect(img, f'Morse: {morse_string}', (100,400), colorR = color)
+            # cvzone.putTextRect(img, f'Morse: {morse_string}', (100,400), colorR = color)
+            cvzone.putTextRect(img, f'Bool: {isBlinking}', (100,400), colorR = color)
             
-            imgPlot = plotY.update(ratioAvg)
-        
             ret, buffer = cv2.imencode('.jpg', img)
             frame = buffer.tobytes()
             yield (b'--frame\r\n'
-                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
+                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+        else:
+            print("tak nampak")
 
     cv2.destroyAllWindows()
     cv2.waitKey(1)
-
 
 @app.route('/')
 def index():
@@ -197,7 +202,7 @@ def video_feed():
 @app.route('/_stuff', methods=['GET'])
 def stuff():
     global counterFrame
-    return jsonify(blinkCounter=counterFrame, stringMorse = morse_string, stringFinal = final_message)
+    return jsonify(blinkCounter=counterFrame, stringMorse = morse_string, stringFinal = final_message, isBlinking = isBlinking)
 
 if __name__ == "__main__":
     app.run(debug=True)

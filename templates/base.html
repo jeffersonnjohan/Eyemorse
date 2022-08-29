@@ -156,8 +156,6 @@
             color: #262930;
         }
 
-
-
         .row_right .upper{
             border-style: solid;
             border-color: #fff;
@@ -169,8 +167,8 @@
         }
         .upper .text{
             margin-top: 1vw;
-            padding-left: 2.430555555555556vw;
             padding-top: 0;
+            text-align: center;
             font-family: var(--main-font);
             font-size: 2.083333333333333vw;
             font-weight: 500;
@@ -209,6 +207,19 @@
             color: #fff;
             text-align: center;
         }
+
+        .kedip{
+            background-color: greenyellow;
+        }
+
+        .non-kedip{
+            background-color: red;
+        }
+
+        #success{
+            height: 30px;
+            width: 100%;
+        }
     </style>
     <title>EyeMorse</title>
 </head>
@@ -218,12 +229,23 @@
 
     $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     function update_values(){
-        $.getJSON($SCRIPT_ROOT + '/_stuff',
         
+        $.getJSON($SCRIPT_ROOT + '/_stuff',
         function(data){
             $('#blinkCounter').text(data.blinkCounter);
             $('#stringMorse').text(data.stringMorse);
             $('#stringFinal').text(data.stringFinal);
+            $('#isBlinking').text(data.isBlinking);
+
+            if(data.isBlinking){
+                // Kedip
+                $('#success').removeClass('non-kedip');
+                $('#success').addClass('kedip');
+            } else{
+                // Tidak kedip
+                $('#success').removeClass('kedip');
+                $('#success').addClass('non-kedip');
+            }
         });
     };
 </script>
@@ -273,7 +295,7 @@
                 </div>
                 <div class="info">
                     <div class="info-text">
-                        <center><span id="blinkCounter">?</span>   {% block content %}{% endblock content %}</center>
+                        <center><span id="blinkCounter">?</span></center>
                     </div>
                 </div>
 
@@ -299,6 +321,11 @@
             </div>
 
         </div>
+    </div>
+
+    <!-- Lampu indikator kedip dan non kedip -->
+    <div id="success">
+
     </div>
 
     <!-- Footer -->
