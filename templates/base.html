@@ -128,7 +128,7 @@
             border-style: solid;
             border-width: 0.2777777777777778vw;
             border-color: #fff;
-            margin-top: 3.194444444444444vw;
+            margin-top: 1.7361111111111112vw;
             border-radius: 1.7361111111111112vw;
             background-color: #262930;
             width: 18.75vw;   
@@ -195,12 +195,12 @@
         }
         .pythonprogram img{
             border-radius: 1.7361111111111112vw;
-            width: 52.083333333333336vw;
-            height: 39.93055555555556vw;
+            width: 46.875vw;
+            height: 35.9375vw;
         }
 
         .foot-property{
-            margin-top: 1.3%;
+            margin-top: 1vw;
             font-family: var(--main-font);
             font-size: 0.8333333333333334vw;
             font-weight: 600;
@@ -210,25 +210,40 @@
 
         .kedip{
             /*Ini kalau style kedip*/
-            background-color: greenyellow;
+            background-color: #1B8749;
         }
         
         .non-kedip{
             /*Ini kalau style tidak kedip*/
-            background-color: red;
+            background-color: #F05C6C;
         }
 
         #success{
             /* Ini utk style default indikator */
-            height: 30px;
-            width: 100%;
+            height: 36.97916666666667vw;
+            width: 47.91666666666667vw;
+            border-radius: 1.9361111111111112vw;
+            padding-top: 0.5208333333333333vw;
         }
 
         #faceDetection{
             /*Ini pesan no face detection*/
-            background-color: pink;
             height: 50px;
-            width: 100px;
+            width: 270px;
+            border-radius: 6.944444444444445vw;
+            background-color: #262930;
+            position: absolute;
+            top: 24.791666666666668vw;
+            left: 21.041666666666668vw;
+            z-index: 3;
+        }
+
+        #faceDetection div {
+            font-family: var(--main-font);
+            font-size: 1.6666666666666667vw;
+            font-weight: 500;
+            color: #fff;
+            margin-top: 0.5vw;
         }
 
         #faceDetection.displayNone{
@@ -305,7 +320,11 @@
     <!-- William -->
     <div class="container-stuff">
         <div class="row_mid">
-            <div class="pythonprogram">
+            <div class="pythonprogram" id="success">
+                <!-- Indikator muka terdeteksi -->
+                <div id="faceDetection" class="displayNone">
+                    <div> <center>No face detected!</center> </div>
+                </div>
                 <center><img src="{{ url_for('video_feed') }}"></center>
             </div>
         </div>
@@ -342,28 +361,12 @@
                 </div>
             </div>
 
+            <div class="foot-property">
+                ©2022 - Project of IPK5
+            </div>
+
         </div>
     </div>
-
-    <!-- Lampu indikator kedip dan non kedip -->
-    <div id="success">
-
-    </div>
-
-    <!-- Indikator muka terdeteksi -->
-    <div id="faceDetection" class="displayNone">
-        hai
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="foot-property">
-            ©2022 - Project of IPK5
-        </div>
-    </footer>
-
-    <!-- Jeff -->
-
 
     <!-- JS -->
     <script>
