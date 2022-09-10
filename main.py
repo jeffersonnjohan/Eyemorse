@@ -3,7 +3,7 @@ from flask import Flask, jsonify, render_template, Response, request
 import cv2
 import cvzone
 from cvzone.FaceMeshModule import FaceMeshDetector
-from cvzone.PlotModule import LivePlot
+# from cvzone.PlotModule import LivePlot
 
 counterFrame = 0
 morse_string = ""
@@ -98,7 +98,7 @@ def morse_dict(str):
 def gen_frames():
     camera = cv2.VideoCapture(0)
     detector = FaceMeshDetector(maxFaces = 1)
-    plotY = LivePlot(640, 360, [20, 50], invert = True)
+    # plotY = LivePlot(640, 360, [20, 50], invert = True)
 
     idList = [22, 23, 24, 26, 110, 157, 158, 159, 160, 161, 130, 243]
     ratioList = []
