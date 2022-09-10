@@ -250,6 +250,10 @@
             display: none;
         }
 
+        .row_right.displayNone{
+            display: none;
+        }
+
     </style>
     <title>EyeMorse</title>
 </head>
@@ -282,6 +286,10 @@
             } else{
                 // Tidak ada mukanya
                 $('#faceDetection').removeClass('displayNone');
+            }
+
+            if(data.isStart){
+                $('.row_right').removeClass('displayNone')
             }
         });
     };
@@ -328,7 +336,8 @@
                 <center><img src="{{ url_for('video_feed') }}"></center>
             </div>
         </div>
-        <div class="row_right">
+
+        <div class="row_right displayNone">
 
             <div class="lower">
                 <div class="text">

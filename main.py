@@ -3,13 +3,14 @@ from flask import Flask, jsonify, render_template, Response, request
 import cv2
 import cvzone
 from cvzone.FaceMeshModule import FaceMeshDetector
-# from cvzone.PlotModule import LivePlot
+import mediapipe as mp
 
 counterFrame = 0
 morse_string = ""
 final_message = ""
 isBlinking = False
 isDetectingFace = False
+isStart = False
 
 #Initialize the Flask app
 app = Flask(__name__)
@@ -97,6 +98,10 @@ def morse_dict(str):
 
 def gen_frames():
     camera = cv2.VideoCapture(0)
+    mpHands = mp.solutions.hands
+    hands = mpHands.Hands()
+    mpDraw = mp.solutions.drawing_utils
+
     detector = FaceMeshDetector(maxFaces = 1)
     # plotY = LivePlot(640, 360, [20, 50], invert = True)
 
@@ -113,16 +118,29 @@ def gen_frames():
     global counterFrame
     global isBlinking
     global isDetectingFace
+    global isStart
 
     counterFrame = 0
     morse_string = ""
     final_message = ""
     isBlinking = False
+    isStart = False
 
     while True:
         success, img = camera.read()
         img, faces = detector.findFaceMesh(img, draw = False)
-        
+
+        imageRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        results = hands.process(imageRGB)
+
+        if results.multi_hand_landmarks:
+            # Terdeteksi tangan
+            counterFrame = 0
+            morse_string = ""
+            final_message = ""
+            print('masuk tangan')
+            isStart = True
+
         if faces:
             isDetectingFace = True
             face = faces[0]
@@ -202,7 +220,7 @@ def video_feed():
 @app.route('/_stuff', methods=['GET'])
 def stuff():
     global counterFrame
-    return jsonify(blinkCounter=counterFrame, stringMorse = morse_string, stringFinal = final_message, isBlinking = isBlinking, isDetectingFace = isDetectingFace)
+    return jsonify(blinkCounter=counterFrame, stringMorse = morse_string, stringFinal = final_message, isBlinking = isBlinking, isDetectingFace = isDetectingFace, isStart = isStart)
 
 if __name__ == "__main__":
     app.run(debug=True)
