@@ -113,7 +113,7 @@ def gen_frames():
 
     # Message
     string = "Undefined"
-    global morse_string
+    global morse_string 
     global final_message
     global counterFrame
     global isBlinking
@@ -138,7 +138,6 @@ def gen_frames():
             counterFrame = 0
             morse_string = ""
             final_message = ""
-            print('masuk tangan')
             isStart = True
 
         if faces:

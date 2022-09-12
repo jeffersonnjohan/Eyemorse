@@ -289,7 +289,9 @@
             }
 
             if(data.isStart){
-                $('.row_right').removeClass('displayNone')
+                $('.row_right').removeClass('displayNone');
+            } else {
+                $('.row_right').addClass('displayNone');
             }
         });
     };
