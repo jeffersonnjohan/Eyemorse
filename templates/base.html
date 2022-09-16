@@ -259,7 +259,7 @@
 </head>
 
 <script type="text/javascript">
-    var intervalID = setInterval(update_values,100);
+    var intervalID = setInterval(update_values,50);
 
     $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     function update_values(){
@@ -327,7 +327,6 @@
         </div>
     </header>
 
-    <!-- William -->
     <div class="container-stuff">
         <div class="row_mid">
             <div class="pythonprogram" id="success">

@@ -126,20 +126,29 @@ def gen_frames():
     isBlinking = False
     isStart = False
 
+    checkHandCounter = 0
+
     while True:
         success, img = camera.read()
         img, faces = detector.findFaceMesh(img, draw = False)
 
         imageRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        results = hands.process(imageRGB)
 
-        if results.multi_hand_landmarks:
-            # Terdeteksi tangan
-            counterFrame = 0
-            morse_string = ""
-            final_message = ""
-            isStart = True
+        # Cek tangan
+        if checkHandCounter == 5:
+            results = hands.process(imageRGB)
 
+            if results.multi_hand_landmarks:
+                # Terdeteksi tangan
+                counterFrame = 0
+                morse_string = ""
+                final_message = ""
+                isStart = True
+            
+            checkHandCounter = 0
+        else:
+            checkHandCounter += 1
+        
         if faces:
             isDetectingFace = True
             face = faces[0]
