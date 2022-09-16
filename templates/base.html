@@ -200,7 +200,8 @@
 
         .container .row_mid{
             margin-right: auto;
-            margin-left: 0;
+            margin-left: auto;
+            /*margin: auto;*/
             margin-top: 0;
             background-color: #262930;
         }
@@ -391,6 +392,131 @@
             align-items: center;
             color: #47484A;            
         }
+
+        .feedback .blank-space{
+            margin-top: 50px;
+        }
+        .feedback .shape-rectangle{
+            width: 86.11111111111111vw;
+            height: 950px;
+            background-color: #ffffff;
+            border-radius: 50px;
+            /* opacity: 85%; */
+        }
+        .feedback .space{
+            padding-top: 20px;
+            width: auto;
+            height: auto;
+        }
+        .feedback .space-15{
+            padding-top: 15px;
+            width: auto;
+            height: auto;
+        }
+        .feedback .space-25{
+            padding-top: 25px;
+            width: auto;
+            height: auto;
+        }
+        .feedback .space-70{
+            padding-top: 70px;
+            width: auto;
+            height: auto;
+        }
+        .feedback .space-50{
+            padding-top: 50px;
+            width: auto;
+            height: auto;
+        }
+        
+        .feedback .title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            color: #262930;
+            line-height: 72px;
+            text-align: center;            
+        }
+        
+        .feedback .form{
+            display: flex;
+            align-items: center;
+        }
+        .feedback .form-container{
+            width: 550px;
+            height: 600px;
+        }
+        
+        .feedback .form-container .form-label{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+            color: #262930;
+        }
+        .feedback .form-container .form-input{
+            width: 550px;
+            height: 40px;
+            background: #F5F5F5;
+            border-radius: 15px;
+        }
+        .feedback .form-input .input{
+            width: 550px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 30px;
+            color: #A0A1A8;;
+            border: none;
+            background: none;
+            outline: none;   
+            margin-left: 25px;
+            margin-top: 3px;
+        }
+        .feedback .input-long{
+            width: 550px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 30px;
+            color: #A0A1A8;;
+            border: none;
+            background: none;
+            outline: none;   
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        .feedback .form-input-long{
+            width: 550px;
+            height: 200px;
+            background: #F5F5F5;
+            border-radius: 15px;
+        }
+        
+        .feedback .submit-button{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+            border: none;
+            background: none;
+            outline: none;  
+            background-color: #262930;
+            padding: 15px 40px 15px 40px;
+            border-radius: 20px;
+        }
+        .feedback .submit-button img{
+            margin-left: 15px;
+        }
     </style>
     <title>EyeMorse</title>
 </head>
@@ -458,8 +584,8 @@
                         <ul class="menu">
                             <li id="buttonHome" class="menu-item active"><a href="#" class="menu-link">Home</a></li>
                             <li id="buttonAboutUs" class="menu-item"><a href="#" class="menu-link">About Us</a></li>
-                            <li id="buttonHelp" class="menu-item"><a href="#optionalSection" class="menu-link">Help</a></li>
-                            <li id="buttonFeedback" class="menu-item"><a href="#" class="menu-link">Feedback</a></li>
+                            <li id="buttonHelp" class="menu-item"><a href="#help" class="menu-link">Help</a></li>
+                            <li id="buttonFeedback" class="menu-item"><a href="#feedback" class="menu-link">Feedback</a></li>
                         </ul>
                         <a href="#" class="btn-eyemorse">Translate Now</a>
                     </div>
@@ -550,105 +676,162 @@
 
         </div>
 
-        <div class="optional-section" id="optionalSection">
-            <!-- section help -->
-            <div class="help dnone" id="help">
-                <div class="blank-space"></div>
-    
-                <div class="shape-rectangle">
-                    <div class="space"></div>
-                    <a href="#"><img src="../static/button.svg" style="margin-left: 40px; margin-top: 15px;" alt=""></a> 
-    
-                    <div class="title">How to Use Dits & Dahs?</div>
-    
-                    <div class="space-70"></div>
-    
-                    <div class="upper-section">
-                        <div class="section1">
-                            <img src="../static/1 do-nothing.svg" alt="">
-                            <div class="text">
-                                <div class="heading">Do nothing</div>
-                                <div class="sub-heading">
-                                    Make the blink counter <br>
-                                    between 1-3 counts to <br>
-                                    do nothing
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="section2">
-                            <img src="../static/2 dits.svg" alt="">
-                            <div class="text">
-                                <div class="heading">Dits!</div>
-                                <div class="sub-heading">
-                                    Make the blink counter <br>
-                                    between 3-6 counts to <br>
-                                    make a dits sign
-                                </div>
+        <!-- section help -->
+        <div class="help dnone" id="help">
+            <div class="blank-space"></div>
+
+            <div class="shape-rectangle">
+                <div class="space"></div>
+                <a href="#"><img src="../static/button.svg" style="margin-left: 40px; margin-top: 15px;" alt=""></a> 
+
+                <div class="title">How to Use Dits & Dahs?</div>
+
+                <div class="space-70"></div>
+
+                <div class="upper-section">
+                    <div class="section1">
+                        <img src="../static/1 do-nothing.svg" alt="">
+                        <div class="text">
+                            <div class="heading">Do nothing</div>
+                            <div class="sub-heading">
+                                Make the blink counter <br>
+                                between 1-3 counts to <br>
+                                do nothing
                             </div>
                         </div>
                     </div>
-    
-                    <div class="space-70"></div>
-    
-                    <div class="lower-section">
-                        <div class="section3">
-                            <img src="../static/3 dahs.svg" alt="">
-                            <div class="text">
-                                <div class="heading">Dahs!</div>
-                                <div class="sub-heading">
-                                    Make the blink counter <br>
-                                    between 6-9 counts to <br>
-                                    make a dahs sign
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="section4">
-                            <img src="../static/4 go.svg" alt="">
-                            <div class="text">
-                                <div class="heading">GO!</div>
-                                <div class="sub-heading">
-                                    Make the blink counter <br>
-                                    10 or more counts as <br>
-                                    the enter button
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="space-70"></div>
-    
-                    <div class="lower-section">
-                        <div class="section3">
-                            <img src="../static/5 wave.svg" alt="">
-                            <div class="text">
-                                <div class="heading">Wave!</div>
-                                <div class="sub-heading">
-                                    Wave your hands on <br>
-                                    camera to reset <br>
-                                    all progress saved 
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="section4">
-                            <img src="../static/6 blinking.svg" alt="">
-                            <div class="text">
-                                <div class="heading">Blinking?</div>
-                                <div class="sub-heading">
-                                    The border shows red <br>
-                                    as not blinking and <br> 
-                                    green as blinking 
-                                </div>
+
+                    <div class="section2">
+                        <img src="../static/2 dits.svg" alt="">
+                        <div class="text">
+                            <div class="heading">Dits!</div>
+                            <div class="sub-heading">
+                                Make the blink counter <br>
+                                between 3-6 counts to <br>
+                                make a dits sign
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="space-70"></div>
+
+                <div class="lower-section">
+                    <div class="section3">
+                        <img src="../static/3 dahs.svg" alt="">
+                        <div class="text">
+                            <div class="heading">Dahs!</div>
+                            <div class="sub-heading">
+                                Make the blink counter <br>
+                                between 6-9 counts to <br>
+                                make a dahs sign
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section4">
+                        <img src="../static/4 go.svg" alt="">
+                        <div class="text">
+                            <div class="heading">GO!</div>
+                            <div class="sub-heading">
+                                Make the blink counter <br>
+                                10 or more counts as <br>
+                                the enter button
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-70"></div>
+
+                <div class="lower-section">
+                    <div class="section3">
+                        <img src="../static/5 wave.svg" alt="">
+                        <div class="text">
+                            <div class="heading">Wave!</div>
+                            <div class="sub-heading">
+                                Wave your hands on <br>
+                                camera to reset <br>
+                                all progress saved 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section4">
+                        <img src="../static/6 blinking.svg" alt="">
+                        <div class="text">
+                            <div class="heading">Blinking?</div>
+                            <div class="sub-heading">
+                                The border shows red <br>
+                                as not blinking and <br> 
+                                green as blinking 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank-space"></div>
+        </div>
+
+        <!-- section feedback -->
+        <div class="feedback dnone" id="feedback">
+            <div class="blank-space"></div>
+    
+            <div class="shape-rectangle">
+                <div class="space"></div>
+                <a href="#"><img src="../static/button.svg" style="margin-left: 40px; margin-top: 15px;" alt=""></a> 
+    
+                <div class="title">Feedback Form</div>
+    
+                <div class="space-70"></div>
+    
+                <div class="form">
+                    <div class="form-container">
+                        <!-- Name -->
+                        <form action="">
+                            <label for="" class="form-label">Name</label> <br>
+                            <div class="space-15"></div>
+                            <div class="form-input">
+                                <input type="text" class="input" placeholder="Enter name">
+                            </div>
+    
+                        <!-- Email -->
+                        <div class="space-15"></div>
+                            <label for="" class="form-label">Email</label> <br>
+                            <div class="space-15"></div>
+                            <div class="form-input">
+                                <input type="text" class="input" placeholder="Enter email">
+                            </div>
+    
+                        <!-- Subject -->
+                        <div class="space-15"></div>
+                            <label for="" class="form-label">Subject</label> <br>
+                            <div class="space-15"></div>
+                            <div class="form-input">
+                                <input type="text" class="input" placeholder="Enter subject">
+                            </div>
+    
+                        <!-- Message -->
+                        <div class="space-15"></div>
+                            <label for="" class="form-label">Message</label> <br>
+                            <div class="space-15"></div>
+                            <div class="form-input-long">
+                                <input type="text" class="input-long" placeholder="Enter message">
+                            </div>
+    
+                        
+    
+                    </div>
+                    <img src="../static/feedback/1 feedback icon.svg" alt="">
+                </div>
+    
+                <div class="space-25"></div>
+                <button type="submit" class="submit-button">Submit <img src="../static/feedback/2 arrow.svg" alt=""> </button>
+    
+                
                 <div class="blank-space"></div>
             </div>
-    
-            <!-- section about us -->
+            <div class="blank-space"></div>
         </div>
     </div>
 
@@ -663,12 +846,15 @@
         const buttonHelp = document.getElementById("buttonHelp");
         const buttonFeedback = document.getElementById("buttonFeedback");
         const sectionHelp = document.getElementById("help")
+        const sectionFeedback = document.getElementById("feedback")
 
         buttonHome.addEventListener('click',function(){
             buttonHome.classList.add('active')
             buttonAboutUs.classList.remove('active')
             buttonHelp.classList.remove('active')
             buttonFeedback.classList.remove('active')
+            sectionFeedback.classList.add('dnone')
+            sectionHelp.classList.add('dnone')
         })
         
         buttonAboutUs.addEventListener('click',function(){
@@ -684,6 +870,7 @@
             buttonAboutUs.classList.remove('active')
             buttonFeedback.classList.remove('active')
             sectionHelp.classList.remove('dnone')
+            sectionFeedback.classList.add('dnone')
         })
         
         buttonFeedback.addEventListener('click',function(){
@@ -691,6 +878,8 @@
             buttonHome.classList.remove('active')
             buttonAboutUs.classList.remove('active')
             buttonHelp.classList.remove('active')
+            sectionFeedback.classList.remove('dnone')
+            sectionHelp.classList.add('dnone')
         })
 
     </script>
