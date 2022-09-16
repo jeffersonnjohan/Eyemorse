@@ -251,8 +251,8 @@
         }
 
         #faceDetection.tampilanHome{
-            top: 44vw;
-            left: 39vw;
+            top: 42.5vw;
+            left: 40.7vw;
         }
 
         #faceDetection div {
@@ -517,6 +517,126 @@
         .feedback .submit-button img{
             margin-left: 15px;
         }
+
+        .about-us .blank-space{
+            margin-top: 50px;
+        }
+        .about-us .shape-rectangle{
+            width: 86.11111111111111vw;
+            height: 2600px;
+            background-color: #ffffff;
+            border-radius: 50px;
+            /* opacity: 85%; */
+        }
+        .about-us .space{
+            padding-top: 20px;
+            width: auto;
+            height: auto;
+        }
+        .about-us .space-120{
+            padding-top: 120px;
+            width: auto;
+            height: auto;
+        }
+        .about-us .space-50{
+            padding-top: 50px;
+            width: auto;
+            height: auto;
+        }
+        .about-us .space-75{
+            padding-top: 75px;
+            width: auto;
+            height: auto;
+        }
+        
+        .about-us .title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            color: #262930;
+            line-height: 72px;
+            text-align: center;            
+        }
+        
+        .about-us .left-side{
+            width: 1000px;
+            height: 400px;
+            background-color: #262930;
+            /* border-radius: 0px 100px 100px 0px; */
+            border-radius: 75px;
+            margin-left: 25px;
+            display: flex;
+            align-items: center;
+        }
+        .about-us .left-side img{
+            margin-left: 45px;
+        }
+        .about-us .left-side .texts .name{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 72px;
+            color: #ffffff;
+        }
+        .about-us .left-side .texts .position{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            color: #ffffff;
+        }
+        .about-us .left-side .texts .desc{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 45px;
+            color: #ffffff;
+        }
+        
+        .about-us .right-side{
+            width: 1000px;
+            height: 400px;
+            background-color: #262930;
+            /* border-radius: 100px 0px 0px 100px; */
+            border-radius: 75px;
+            margin-right: 25px;
+            display: flex;
+            align-items: center;
+        }
+        .about-us .right-side img{
+            margin-right: 45px;
+        }
+        .about-us .right-side .texts .name{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 72px;
+            color: #ffffff;
+            text-align: right;
+        }
+        .about-us .right-side .texts .position{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            color: #ffffff;
+            text-align: right;
+        }
+        .about-us .right-side .texts .desc{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 45px;
+            color: #ffffff;
+            text-align: right;
+        }
     </style>
     <title>EyeMorse</title>
 </head>
@@ -583,7 +703,7 @@
                     <div class="menu-wrapper">
                         <ul class="menu">
                             <li id="buttonHome" class="menu-item active"><a href="#" class="menu-link">Home</a></li>
-                            <li id="buttonAboutUs" class="menu-item"><a href="#" class="menu-link">About Us</a></li>
+                            <li id="buttonAboutUs" class="menu-item"><a href="#aboutUs" class="menu-link">About Us</a></li>
                             <li id="buttonHelp" class="menu-item"><a href="#help" class="menu-link">Help</a></li>
                             <li id="buttonFeedback" class="menu-item"><a href="#feedback" class="menu-link">Feedback</a></li>
                         </ul>
@@ -833,6 +953,102 @@
             </div>
             <div class="blank-space"></div>
         </div>
+
+        <!-- section aboutUs -->
+        <div class="about-us dnone" id="aboutUs"> 
+            <div class="blank-space"></div>
+    
+            <div class="shape-rectangle">
+                <div class="space"></div>
+                <a href="#"><img src="Assets/button.svg" style="margin-left: 40px; margin-top: 15px;" alt=""></a> 
+    
+                <div class="title">About Us</div>
+    
+                <div class="space-120"></div>
+    
+                <!-- Jef -->
+                <div class="left-side">
+                    <img src="Assets/about us/1 jefferson.svg" alt="">
+                    <div class="texts">
+                        <div class="name">Jefferson Johan</div>
+                        <div class="position">IPK 1</div>
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet, <br> 
+                            consectetur adipiscing elit. Aliquam id <br> 
+                            odio non enim vulputate malesuada. <br> 
+                            Phasellus quis finibus risus. Phasellus.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Kwan -->
+                <div class="space-75"></div>
+                <div class="right-side">
+                    <div class="texts">
+                        <div class="name">Vanessa Kwandinata</div>
+                        <div class="position">IPK 2</div>
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet, <br> 
+                            consectetur adipiscing elit. Aliquam id <br> 
+                            odio non enim vulputate malesuada. <br> 
+                            Phasellus quis finibus risus. Phasellus.
+                        </div>
+                    </div>
+                    <img src="Assets/about us/2 vanessa.svg" alt="">
+                </div>
+    
+                <!-- Wili -->
+                <div class="space-75"></div>
+                <div class="left-side">
+                    <img src="Assets/about us/3 william.svg" alt="">
+                    <div class="texts">
+                        <div class="name">William Suryadharma</div>
+                        <div class="position">IPK 3</div>
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet, <br> 
+                            consectetur adipiscing elit. Aliquam id <br> 
+                            odio non enim vulputate malesuada. <br> 
+                            Phasellus quis finibus risus. Phasellus.
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Tata -->
+                <div class="space-75"></div>
+                <div class="right-side">
+                    <div class="texts">
+                        <div class="name">Natalia Karundeng</div>
+                        <div class="position">IPK 4</div>
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet, <br> 
+                            consectetur adipiscing elit. Aliquam id <br> 
+                            odio non enim vulputate malesuada. <br> 
+                            Phasellus quis finibus risus. Phasellus.
+                        </div>
+                    </div>
+                    <img src="Assets/about us/4 tata.svg" alt="">
+                </div>
+    
+                <!-- Charlene -->
+                <div class="space-50"></div>
+                <div class="left-side">
+                    <img src="Assets/about us/5 charlene.svg" alt="">
+                    <div class="texts">
+                        <div class="name">Charlene Jovannie</div>
+                        <div class="position">IPK 5</div>
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet, <br> 
+                            consectetur adipiscing elit. Aliquam id <br> 
+                            odio non enim vulputate malesuada. <br> 
+                            Phasellus quis finibus risus. Phasellus.
+                        </div>
+                    </div>
+                </div>            
+    
+    
+            <div class="blank-space"></div>
+        </div>
+        <div class="blank-space"></div>
     </div>
 
     <!-- JS -->
@@ -847,6 +1063,7 @@
         const buttonFeedback = document.getElementById("buttonFeedback");
         const sectionHelp = document.getElementById("help")
         const sectionFeedback = document.getElementById("feedback")
+        const sectionAboutUs = document.getElementById("aboutUs")
 
         buttonHome.addEventListener('click',function(){
             buttonHome.classList.add('active')
@@ -855,6 +1072,7 @@
             buttonFeedback.classList.remove('active')
             sectionFeedback.classList.add('dnone')
             sectionHelp.classList.add('dnone')
+            sectionAboutUs.classList.add('dnone')
         })
         
         buttonAboutUs.addEventListener('click',function(){
@@ -862,6 +1080,9 @@
             buttonHome.classList.remove('active')
             buttonHelp.classList.remove('active')
             buttonFeedback.classList.remove('active')
+            sectionHelp.classList.add('dnone')
+            sectionFeedback.classList.add('dnone')
+            sectionAboutUs.classList.remove('dnone')
         })
         
         buttonHelp.addEventListener('click',function(){
@@ -871,6 +1092,7 @@
             buttonFeedback.classList.remove('active')
             sectionHelp.classList.remove('dnone')
             sectionFeedback.classList.add('dnone')
+            sectionAboutUs.classList.add('dnone')
         })
         
         buttonFeedback.addEventListener('click',function(){
@@ -880,6 +1102,7 @@
             buttonHelp.classList.remove('active')
             sectionFeedback.classList.remove('dnone')
             sectionHelp.classList.add('dnone')
+            sectionAboutUs.classList.add('dnone')
         })
 
     </script>
