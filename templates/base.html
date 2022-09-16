@@ -238,6 +238,11 @@
             z-index: 3;
         }
 
+        #faceDetection.tampilanHome{
+            top: 44vw;
+            left: 39vw;
+        }
+
         #faceDetection div {
             font-family: var(--main-font);
             font-size: 1.6666666666666667vw;
@@ -254,6 +259,68 @@
             display: none;
         }
 
+        .alert.displayNone{
+            display: none;
+        }
+
+        /*Style Alert*/        
+        section{
+            margin-top: 200px;
+        }
+        .container{
+            max-width: 1440px;
+        }
+        
+        .blank-space{
+            margin-top: 50px;
+        }
+        .shape-rectangle{
+            width: 83.33333333333334vw;
+            height: 155px;
+            background-color: #ffffff;
+            border-radius: 30px;
+            margin-bottom: 3vw;
+        }
+        
+        .content{
+            display: flex;
+            align-items: center;
+        }
+        .content .line{
+            margin-top: 23px;
+            margin-left: 40px;
+        }
+        
+        .texts{
+            margin-left: 0px;
+            width: 72.91666666666666vw;
+        }
+        .texts .upper{
+            margin-top: 10px;
+            margin-left: 0;
+            width: 170px;
+            display: flex;
+            align-items: center;
+        }
+        .upper img{
+            margin-left: 0;
+        }
+        .upper .heading{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 60px;
+            color: #262930;
+        }
+        .lower {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 33px;
+            color: #47484A;
+        }
     </style>
     <title>EyeMorse</title>
 </head>
@@ -290,8 +357,12 @@
 
             if(data.isStart){
                 $('.row_right').removeClass('displayNone');
+                $('.alert').addClass('displayNone');
+                $('#faceDetection').removeClass('tampilanHome');
             } else {
                 $('.row_right').addClass('displayNone');
+                $('.alert').removeClass('displayNone');
+                $('#faceDetection').addClass('tampilanHome');
             }
         });
     };
@@ -328,10 +399,42 @@
     </header>
 
     <div class="container-stuff">
+        <!-- Alert -->
+        <div class="alert"> 
+            <div class="blank-space"></div>
+
+            <div class="shape-rectangle">
+                <div class="space"></div>
+
+                <div class="content">
+                    <div class="line">
+                        <img src="../static/alert/1 line.svg" alt="">
+                    </div>
+
+                    <div class="texts">
+                        <div class="upper">
+                            <img src="../static/alert/2 alert.svg" alt="">
+                            <div class="heading">Alert!</div>
+                        </div>
+                        <div class="lower">
+                            Position yourself straight to the camera. Make sure your blink is detected. Wave your hand 
+                            to the camera if the blinking has been detected properly.
+
+                            <!-- Posisikan diri Anda sejajar dengan kamera. Pastikan kedipan mata Anda terdeteksi. Lambaikan <br> 
+                            tangan ke kamera jika sudah kedipan sudah terdeteksi dengan baik -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-120"></div>
+            </div>
+                
+        </div>
+
         <div class="row_mid">
             <div class="pythonprogram" id="success">
                 <!-- Indikator muka terdeteksi -->
-                <div id="faceDetection" class="displayNone">
+                <div id="faceDetection" class="displayNone tampilanHome">
                     <div> <center>No face detected!</center> </div>
                 </div>
                 <center><img src="{{ url_for('video_feed') }}"></center>
