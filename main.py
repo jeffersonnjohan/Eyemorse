@@ -205,11 +205,6 @@ def gen_frames():
                     morse_string += '.'
                 counterFrame = 0
             
-            # cvzone.putTextRect(img, f'Blink Counter: {counterFrame}', (100,100), colorR = color)
-            # cvzone.putTextRect(img, f'Final: {final_message}', (100,300), colorR = color)
-            # cvzone.putTextRect(img, f'Morse: {morse_string}', (100,400), colorR = color)
-            # cvzone.putTextRect(img, f'Bool: {isBlinking}', (100,400), colorR = color)
-            
             ret, buffer = cv2.imencode('.jpg', img)
             frame = buffer.tobytes()
             yield (b'--frame\r\n'
