@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/dits & dahs.svg" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         
@@ -49,7 +49,7 @@
 
         .navbar{
             height: 7.638888888888889vw;
-            /* 1440px */
+            /* 142.7vw */
             padding-top: 1.7361111111111112vw;
         }
 
@@ -61,7 +61,7 @@
             align-items: center;
         }
         .mainlogo{
-            width: 17.36111111111111vw;
+            width: 18vw;
             height: auto;
             justify-content: space-between;
             display: flex;
@@ -74,19 +74,17 @@
             border-radius: 6.944444444444445vw;
             justify-content: space-between;
         }
-        .circle .text{
-            text-align: center;
-            margin-right: 0;
-            font-size: 2.2222222222222223vw;
-            color: #262930;
-            font-weight: 700;
+        .logo{
+            margin-top: 0.34vw;
         }
         .eyemorse{
             font-size: 2.2222222222222223vw;
             color: #fff;
             font-weight: 600;
+            margin-left: 1.38vw;
         }
         .nav-wrapper .menu-wrapper{
+            margin-left: 0;
             display: flex;
             gap: 3.4722222222222223vw;
         }
@@ -134,7 +132,7 @@
             margin-top: 0;
             width: 25vw;
         }
-        .row_right .lower{
+        .row_right .lower-right{
             margin-top: 0;
             border-style: solid;
             border-width: 0.2777777777777778vw;
@@ -145,7 +143,7 @@
             width: 18.75vw;   
             height: 20.125vw;
         }
-        .lower .text{
+        .lower-right .text{
             margin-top: 1.0416666666666665vw;
             padding-left: 2.430555555555556vw;
             padding-top: 1.3888888888888888vw;
@@ -154,7 +152,7 @@
             font-weight: 500;
             color: #fff;
         }
-        .lower .info{
+        .lower-right .info{
             width: 13.88888888888889vw;
             height: 2.430555555555556vw;
             background-color: #fff;
@@ -167,7 +165,7 @@
             color: #262930;
         }
 
-        .row_right .upper{
+        .row_right .upper-right{
             border-style: solid;
             border-color: #fff;
             margin-top: 3.194444444444444vw;
@@ -176,7 +174,7 @@
             width: 18.75vw;   
             height: 9.027777777777777vw;
         }
-        .upper .text{
+        .upper-right .text{
             margin-top: 1vw;
             padding-top: 0;
             text-align: center;
@@ -185,13 +183,13 @@
             font-weight: 500;
             color: #262930;
         }
-        .upper .info{
+        .upper-right .info{
             width: 13.88888888888889vw;
             height: 2.430555555555556vw;
             background-color: #262930;
             border-radius: 1.7361111111111112vw;
         }
-        .upper .info-text{
+        .upper-right .info-text{
             padding-top: 0.20833333333333334vw;
             font-size: 1.3888888888888888vw;
             font-weight: 600;
@@ -240,27 +238,28 @@
 
         #faceDetection{
             /*Ini pesan no face detection*/
-            height: 50px;
-            width: 270px;
+            height: 3.47vw;
+            /* width: 270px; */
             border-radius: 6.944444444444445vw;
-            background-color: #262930;
+            /* background-color: #262930; */
             position: absolute;
-            top: 24.791666666666668vw;
-            left: 21.041666666666668vw;
+            top: 23vw;
+            left: 16vw;
             z-index: 3;
         }
 
         #faceDetection.tampilanHome{
-            top: 42.5vw;
-            left: 40.7vw;
+            top: 40.8vw;
+            left: 34.7vw;
         }
 
         #faceDetection div {
             font-family: var(--main-font);
-            font-size: 1.6666666666666667vw;
-            font-weight: 500;
+            font-size: 3.3333333333333335vw;
+            font-weight: 600;
             color: #fff;
             margin-top: 0.5vw;
+            -webkit-text-stroke: 0.5px var(--main-color);
         }
 
         #faceDetection.displayNone{
@@ -277,20 +276,21 @@
 
         /*Style Alert*/        
         section{
-            margin-top: 200px;
+            margin-top: 13.88vw;
         }
         .container{
-            max-width: 1440px;
+            /* max-width: 142.7vw; */
+            max-width: 100vw;
         }
         
         .blank-space{
-            margin-top: 50px;
+            margin-top: 3.47vw;
         }
         .shape-rectangle{
             width: 83.33333333333334vw;
-            height: 155px;
+            height: 10.76vw;
             background-color: #ffffff;
-            border-radius: 30px;
+            border-radius: 2vw;
             margin-bottom: 3vw;
         }
         
@@ -299,18 +299,18 @@
             align-items: center;
         }
         .content .line{
-            margin-top: 23px;
-            margin-left: 40px;
+            margin-top: 1.59vw;
+            margin-left: 2.7vw;
         }
         
         .texts{
-            margin-left: 0px;
-            width: 72.91666666666666vw;
+            margin-left: 0;
+            width: 72.9vw;
         }
         .texts .upper{
-            margin-top: 10px;
+            margin-top: 0.7vw;
             margin-left: 0;
-            width: 170px;
+            width: 11.8vw;
             display: flex;
             align-items: center;
         }
@@ -321,37 +321,38 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
-            font-size: 40px;
-            line-height: 60px;
+            font-size: 2.7vw;
+            line-height: 4.16vw;
             color: #262930;
         }
         .lower {
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 500;
-            font-size: 22px;
-            line-height: 33px;
+            font-size: 1.52vw;
+            line-height: 2.29vw;
             color: #47484A;
         }
 
         /* Help */
         .help .blank-space{
-            margin-top: 50px;
+            margin-top: 3.47vw;
         }
         .help .shape-rectangle{
             width: 86.11111111111111vw;
-            height: 900px;
+            height: 62.5vw;
             background-color: #ffffff;
-            border-radius: 50px;
+            border-radius: 3.47vw;
             /* opacity: 85%; */
         }
         .help .space{
-            padding-top: 20px;
+            padding-top: 1.38vw;
             width: auto;
             height: auto;
         }
         .help .space-70{
-            padding-top: 70px;
+            /* padding-top: 70px; */
+            padding-top: 4.86vw;
             width: auto;
             height: auto;
         }
@@ -360,9 +361,9 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
-            font-size: 48px;
+            font-size: 3.33vw;
             color: #262930;
-            line-height: 72px;
+            line-height: 5vw;
             text-align: center;            
         }
 
@@ -372,49 +373,49 @@
         }
 
         .help .text{
-            margin-left: 25px;
+            margin-left: 1.7361111111111112vw;
         }
         .help .heading{
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
-            font-size: 40px;
-            line-height: 60px;
+            font-size: 2.7vw;
+            line-height: 4.16vw;
             color: #262930;            
         }
         .help .sub-heading{
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 500;
-            font-size: 22px;
-            line-height: 33px;
+            font-size: 1.52vw;
+            line-height: 2.29vw;
             display: flex;
             align-items: center;
             color: #47484A;            
         }
 
         .feedback .blank-space{
-            margin-top: 50px;
+            margin-top: 3.47vw;
         }
         .feedback .shape-rectangle{
-            width: 86.11111111111111vw;
-            height: 950px;
+            width: 86.1vw;
+            height: 64.4vw;
             background-color: #ffffff;
-            border-radius: 50px;
+            border-radius: 3.47vw;
             /* opacity: 85%; */
         }
         .feedback .space{
-            padding-top: 20px;
+            padding-top: 1.38vw;
             width: auto;
             height: auto;
         }
         .feedback .space-15{
-            padding-top: 15px;
+            padding-top: 1vw;
             width: auto;
             height: auto;
         }
         .feedback .space-25{
-            padding-top: 25px;
+            padding-top: 1.7361111111111112vw;
             width: auto;
             height: auto;
         }
@@ -433,9 +434,9 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
-            font-size: 48px;
+            font-size: 3.33vw;
             color: #262930;
-            line-height: 72px;
+            line-height: 5vw;
             text-align: center;            
         }
         
@@ -444,64 +445,64 @@
             align-items: center;
         }
         .feedback .form-container{
-            width: 550px;
-            height: 600px;
+            width: 39.5vw;
+            height: 41.6vw;
         }
         
         .feedback .form-container .form-label{
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 600;
-            font-size: 24px;
-            line-height: 36px;
+            font-size: 1.6vw;
+            line-height: 2.5vw;
             color: #262930;
         }
         .feedback .form-container .form-input{
-            width: 550px;
-            height: 40px;
+            width: 39.513888888888886vw;
+            height: 2.7vw;
             background: #F5F5F5;
-            border-radius: 15px;
+            border-radius: 1vw;
         }
         .feedback .form-input .input{
-            width: 550px;
+            width: 53.47vw;
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 300;
-            font-size: 20px;
+            font-size: 1.38vw;
             line-height: 30px;
             color: #A0A1A8;;
             border: none;
             background: none;
             outline: none;   
-            margin-left: 25px;
-            margin-top: 3px;
+            margin-left: 1.7361111111111112vw;
+            margin-top: 0.2vw;
         }
         .feedback .input-long{
-            width: 550px;
+            width: 53.47vw;
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 300;
-            font-size: 20px;
+            font-size: 1.38vw;
             line-height: 30px;
             color: #A0A1A8;;
             border: none;
             background: none;
             outline: none;   
-            margin-left: 25px;
-            margin-top: 10px;
+            margin-left: 1.7361111111111112vw;
+            margin-top: 0.7vw;
         }
         .feedback .form-input-long{
-            width: 550px;
-            height: 200px;
+            width: 39.513888888888886vw;
+            height: 13.88vw;
             background: #F5F5F5;
-            border-radius: 15px;
+            border-radius: 1vw;
         }
         
         .feedback .submit-button{
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
-            font-size: 20px;
+            font-size: 1.38vw;
             line-height: 30px;
             display: flex;
             align-items: center;
@@ -511,35 +512,35 @@
             background: none;
             outline: none;  
             background-color: #262930;
-            padding: 15px 40px 15px 40px;
-            border-radius: 20px;
+            padding: 1vw 2.7vw 1vw 2.7vw;
+            border-radius: 1.38vw;
         }
         .feedback .submit-button img{
-            margin-left: 15px;
+            margin-left: 1vw;
         }
 
         .about-us .blank-space{
-            margin-top: 50px;
+            margin-top: 3.47vw;
         }
         .about-us .shape-rectangle{
             width: 86.11111111111111vw;
-            height: 2600px;
+            height: 180.5vw;
             background-color: #ffffff;
-            border-radius: 50px;
+            border-radius: 3.47vw;
             /* opacity: 85%; */
         }
         .about-us .space{
-            padding-top: 20px;
+            padding-top: 1.38vw;
             width: auto;
             height: auto;
         }
         .about-us .space-120{
-            padding-top: 120px;
+            padding-top: 11.38vw;
             width: auto;
             height: auto;
         }
         .about-us .space-50{
-            padding-top: 50px;
+            padding-top: 3.47vw;
             width: auto;
             height: auto;
         }
@@ -553,69 +554,75 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
-            font-size: 48px;
+            font-size: 3.33vw;
             color: #262930;
-            line-height: 72px;
+            line-height: 5vw;
             text-align: center;            
         }
         
         .about-us .left-side{
-            width: 1000px;
-            height: 400px;
+            width: 69.44vw;
+            height: 27.7vw;
             background-color: #262930;
             /* border-radius: 0px 100px 100px 0px; */
             border-radius: 75px;
-            margin-left: 25px;
+            margin-left: 1.7361111111111112vw;
             display: flex;
             align-items: center;
         }
         .about-us .left-side img{
-            margin-left: 45px;
+            margin-left: 3.125vw;
+        }
+        .about-us .left-side .texts{
+            margin-left: 3.47vw;
         }
         .about-us .left-side .texts .name{
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 800;
-            font-size: 48px;
-            line-height: 72px;
+            font-size: 2.7vw;
+            line-height: 5vw;
             color: #ffffff;
         }
         .about-us .left-side .texts .position{
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 500;
-            font-size: 24px;
-            line-height: 36px;
+            font-size: 1.52vw;
+            line-height: 2.5vw;
             color: #ffffff;
         }
         .about-us .left-side .texts .desc{
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
-            font-size: 30px;
-            line-height: 45px;
+            font-size: 1.94vw;
+            line-height: 3.125vw;
             color: #ffffff;
         }
         
         .about-us .right-side{
-            width: 1000px;
-            height: 400px;
+            width: 69.44vw;
+            height: 27.7vw;
             background-color: #262930;
             /* border-radius: 100px 0px 0px 100px; */
             border-radius: 75px;
-            margin-right: 25px;
+            margin-right: 1.7361111111111112vw;
             display: flex;
             align-items: center;
         }
         .about-us .right-side img{
-            margin-right: 45px;
+            margin-right: 3.125vw;
+        }
+        .about-us .right-side .texts{
+            margin-right: 3.47vw;
         }
         .about-us .right-side .texts .name{
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 800;
-            font-size: 48px;
-            line-height: 72px;
+            font-size: 2.7vw;
+            line-height: 5vw;
             color: #ffffff;
             text-align: right;
         }
@@ -623,8 +630,8 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 500;
-            font-size: 24px;
-            line-height: 36px;
+            font-size: 1.52vw;
+            line-height: 2.5vw;
             color: #ffffff;
             text-align: right;
         }
@@ -632,13 +639,13 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
-            font-size: 30px;
-            line-height: 45px;
+            font-size: 1.94vw;
+            line-height: 3.125vw;
             color: #ffffff;
             text-align: right;
         }
     </style>
-    <title>EyeMorse</title>
+    <title>Dits & Dahs</title>
 </head>
 
 <script type="text/javascript">
@@ -690,13 +697,11 @@
             <nav class="navbar">
                 <div class="container nav-wrapper">
                     <div class="mainlogo">
-                        <div class="circle">
-                            <div class="text">
-                                E.
-                            </div>
-                        </div>    
+                        <div class="logo">
+                            <img src="../static/dits & dahs.svg" alt="">
+                        </div>
                         <div class="eyemorse">
-                            EyeMorse
+                            Dits & Dahs
                         </div>
                     </div>
 
@@ -707,7 +712,7 @@
                             <li id="buttonHelp" class="menu-item"><a href="#help" class="menu-link">Help</a></li>
                             <li id="buttonFeedback" class="menu-item"><a href="#feedback" class="menu-link">Feedback</a></li>
                         </ul>
-                        <a href="#" class="btn-eyemorse">Translate Now</a>
+                        <div class="btn-eyemorse">Translate Now</div>
                     </div>
                 </div>
             </nav>
@@ -735,9 +740,6 @@
                         <div class="lower">
                             Position yourself straight to the camera. Make sure your blink is detected. Wave your hand 
                             to the camera if the blinking has been detected properly.
-
-                            <!-- Posisikan diri Anda sejajar dengan kamera. Pastikan kedipan mata Anda terdeteksi. Lambaikan <br> 
-                            tangan ke kamera jika sudah kedipan sudah terdeteksi dengan baik -->
                         </div>
                     </div>
                 </div>
@@ -759,7 +761,7 @@
 
         <div class="row_right displayNone">
 
-            <div class="lower">
+            <div class="lower-right">
                 <div class="text">
                     Blink Counter
                 </div>
@@ -779,7 +781,7 @@
                 </div>
             </div>
 
-            <div class="upper">
+            <div class="upper-right">
                 <div class="text">
                     Translation
                 </div>
@@ -802,7 +804,7 @@
 
             <div class="shape-rectangle">
                 <div class="space"></div>
-                <a href="#"><img src="../static/button.svg" style="margin-left: 40px; margin-top: 15px;" alt=""></a> 
+                <a href="#"><img src="../static/button.svg" style="margin-left: 2.7vw; margin-top: 1vw;" alt=""></a> 
 
                 <div class="title">How to Use Dits & Dahs?</div>
 
@@ -810,7 +812,7 @@
 
                 <div class="upper-section">
                     <div class="section1">
-                        <img src="../static/1 do-nothing.svg" alt="">
+                        <img src="../static/help/1 do-nothing.svg" alt="">
                         <div class="text">
                             <div class="heading">Do nothing</div>
                             <div class="sub-heading">
@@ -822,7 +824,7 @@
                     </div>
 
                     <div class="section2">
-                        <img src="../static/2 dits.svg" alt="">
+                        <img src="../static/help/2 dits.svg" alt="">
                         <div class="text">
                             <div class="heading">Dits!</div>
                             <div class="sub-heading">
@@ -838,7 +840,7 @@
 
                 <div class="lower-section">
                     <div class="section3">
-                        <img src="../static/3 dahs.svg" alt="">
+                        <img src="../static/help/3 dahs.svg" alt="">
                         <div class="text">
                             <div class="heading">Dahs!</div>
                             <div class="sub-heading">
@@ -850,7 +852,7 @@
                     </div>
 
                     <div class="section4">
-                        <img src="../static/4 go.svg" alt="">
+                        <img src="../static/help/4 go.svg" alt="">
                         <div class="text">
                             <div class="heading">GO!</div>
                             <div class="sub-heading">
@@ -866,7 +868,7 @@
 
                 <div class="lower-section">
                     <div class="section3">
-                        <img src="../static/5 wave.svg" alt="">
+                        <img src="../static/help/5 wave.svg" alt="">
                         <div class="text">
                             <div class="heading">Wave!</div>
                             <div class="sub-heading">
@@ -878,7 +880,7 @@
                     </div>
 
                     <div class="section4">
-                        <img src="../static/6 blinking.svg" alt="">
+                        <img src="../static/help/6 blinking.svg" alt="">
                         <div class="text">
                             <div class="heading">Blinking?</div>
                             <div class="sub-heading">
@@ -899,7 +901,7 @@
     
             <div class="shape-rectangle">
                 <div class="space"></div>
-                <a href="#"><img src="../static/button.svg" style="margin-left: 40px; margin-top: 15px;" alt=""></a> 
+                <a href="#"><img src="../static/button.svg" style="margin-left: 2.7vw; margin-top: 1vw;" alt=""></a> 
     
                 <div class="title">Feedback Form</div>
     
@@ -938,9 +940,6 @@
                             <div class="form-input-long">
                                 <input type="text" class="input-long" placeholder="Enter message">
                             </div>
-    
-                        
-    
                     </div>
                     <img src="../static/feedback/1 feedback icon.svg" alt="">
                 </div>
@@ -960,7 +959,7 @@
     
             <div class="shape-rectangle">
                 <div class="space"></div>
-                <a href="#"><img src="Assets/button.svg" style="margin-left: 40px; margin-top: 15px;" alt=""></a> 
+                <a href="#"><img src="../static/button.svg" style="margin-left: 2.7vw; margin-top: 1vw;" alt=""></a> 
     
                 <div class="title">About Us</div>
     
@@ -968,15 +967,15 @@
     
                 <!-- Jef -->
                 <div class="left-side">
-                    <img src="Assets/about us/1 jefferson.svg" alt="">
+                    <img src="../static/about us/1 jefferson.svg" alt="">
                     <div class="texts">
                         <div class="name">Jefferson Johan</div>
                         <div class="position">IPK 1</div>
                         <div class="desc">
-                            Lorem ipsum dolor sit amet, <br> 
-                            consectetur adipiscing elit. Aliquam id <br> 
-                            odio non enim vulputate malesuada. <br> 
-                            Phasellus quis finibus risus. Phasellus.
+                            I’m Jefferson, and im leading the team <br>
+                            as a Back-End Team Leader. And in my <br>
+                            spare time i compete in chess <br>
+                            tournaments online.
                         </div>
                     </div>
                 </div>
@@ -988,27 +987,27 @@
                         <div class="name">Vanessa Kwandinata</div>
                         <div class="position">IPK 2</div>
                         <div class="desc">
-                            Lorem ipsum dolor sit amet, <br> 
-                            consectetur adipiscing elit. Aliquam id <br> 
-                            odio non enim vulputate malesuada. <br> 
-                            Phasellus quis finibus risus. Phasellus.
+                            I am the Back-End Developer Support. <br>
+                            First and foremost in my job is to review <br>
+                            the code. I will checked if theres a flaws <br>
+                            in a code.
                         </div>
                     </div>
-                    <img src="Assets/about us/2 vanessa.svg" alt="">
+                    <img src="../static/about us/2 vanessa.svg" alt="">
                 </div>
     
                 <!-- Wili -->
                 <div class="space-75"></div>
                 <div class="left-side">
-                    <img src="Assets/about us/3 william.svg" alt="">
+                    <img src="../static/about us/3 william.svg" alt="">
                     <div class="texts">
                         <div class="name">William Suryadharma</div>
                         <div class="position">IPK 3</div>
                         <div class="desc">
-                            Lorem ipsum dolor sit amet, <br> 
-                            consectetur adipiscing elit. Aliquam id <br> 
-                            odio non enim vulputate malesuada. <br> 
-                            Phasellus quis finibus risus. Phasellus.
+                            I am a Front-End Developer. I have <br>
+                            passion in website designing. I enjoy to <br>
+                            turns any problems into an interesting <br>
+                            design.
                         </div>
                     </div>
                 </div>
@@ -1020,27 +1019,27 @@
                         <div class="name">Natalia Karundeng</div>
                         <div class="position">IPK 4</div>
                         <div class="desc">
-                            Lorem ipsum dolor sit amet, <br> 
-                            consectetur adipiscing elit. Aliquam id <br> 
-                            odio non enim vulputate malesuada. <br> 
-                            Phasellus quis finibus risus. Phasellus.
+                            I am Natalia, the Front-End Consultor. In <br>
+                            addition to my responsibilities, i helped <br>
+                            architect the interface and delivers <br>
+                            presentation.    
                         </div>
                     </div>
-                    <img src="Assets/about us/4 tata.svg" alt="">
+                    <img src="../static/about us/4 tata.svg" alt="">
                 </div>
     
                 <!-- Charlene -->
                 <div class="space-50"></div>
                 <div class="left-side">
-                    <img src="Assets/about us/5 charlene.svg" alt="">
+                    <img src="../static/about us/5 charlene.svg" alt="">
                     <div class="texts">
                         <div class="name">Charlene Jovannie</div>
                         <div class="position">IPK 5</div>
                         <div class="desc">
-                            Lorem ipsum dolor sit amet, <br> 
-                            consectetur adipiscing elit. Aliquam id <br> 
-                            odio non enim vulputate malesuada. <br> 
-                            Phasellus quis finibus risus. Phasellus.
+                            I’m the Tester. I run test in both mobile <br>
+                            and web platforms i also run perform <br>
+                            system, integration and regression <br>
+                            testing.
                         </div>
                     </div>
                 </div>            
