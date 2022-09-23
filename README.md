@@ -27,7 +27,7 @@ This project is created to accomplish <b> Artificial Intelligence </b> Course at
    </tr>
   <tr>
      <td> Natalia Margareth Karundeng </td>
-     <td> Tester & Adviser </td>
+     <td> Consultant </td>
    </tr>
 </table>
 
