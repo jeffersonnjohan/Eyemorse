@@ -1,6 +1,6 @@
 # Eyemorse Computer Vision
 
-<img src= "ipk5foto.jpg" width="400">
+<img src= "imgReadMe/ipk5foto.jpg" width="400">
 This project is created to accomplish <b> Artificial Intelligence </b> Course at my university. This is a group project consisting of:
 <br><br>
 
@@ -34,3 +34,7 @@ This project is created to accomplish <b> Artificial Intelligence </b> Course at
 Thankyou for <b>Mr. Ivan Halim Parmonangan</b> as our lecturer who always guides gives us instruction during this project. Hope this project can be useful for anyone needs it.
 
 Before you can run the main.py correctly, you should install some packages using pip. Make sure your computer have been installed pip. 
+
+
+<img src="imgReadMe/beforeBlink.jpg">
+<img src="imgReadMe/afterBlink.jpg">
