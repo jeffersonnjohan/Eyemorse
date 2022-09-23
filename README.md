@@ -1,5 +1,5 @@
 # Eyemorse Computer Vision
-This project is created to accomplish Artificial Intelligence Course at my university. This is a group project consisting of:
+<h1> This project is created to accomplish Artificial Intelligence Course at my university. This is a group project consisting of: </h1>
 
 1. Jefferson Johan               | Bina Nusantara University
 2. Vanessa Kwandinata            | Bina Nusantara University
