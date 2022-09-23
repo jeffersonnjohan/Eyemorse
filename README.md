@@ -36,5 +36,5 @@ Thankyou for <b>Mr. Ivan Halim Parmonangan</b> as our lecturer who always guides
 Before you can run the main.py correctly, you should install some packages using pip. Make sure your computer have been installed pip. 
 
 
-<img src="imgReadMe/beforeBlink.jpg">
-<img src="imgReadMe/afterBlink.jpg">
+<img src="imgReadMe/beforeblink.jpg">
+<img src="imgReadMe/afterblink.jpg">
